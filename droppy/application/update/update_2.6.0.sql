@@ -1,0 +1,1 @@
+ALTER TABLE droppy_settings ADD COLUMN `max_concurrent_uploads` int(10) NULL DEFAULT 5;

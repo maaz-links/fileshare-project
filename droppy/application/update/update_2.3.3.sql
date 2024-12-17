@@ -1,0 +1,1 @@
+ALTER TABLE droppy_sessions ADD PRIMARY KEY (id);
