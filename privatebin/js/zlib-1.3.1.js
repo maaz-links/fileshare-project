@@ -23,7 +23,7 @@
             _abort: errno => { console.error(`Error: ${errno}`) },
             _grow: () => { },
         };
-        const ins = (await WebAssembly.instantiateStreaming(fetch('js/zlib-1.3.1.wasm'), { env })).instance;
+        const ins = (await WebAssembly.instantiateStreaming(fetch('privatebin/js/zlib-1.3.1.wasm'), { env })).instance;
 
         const srcPtr = ins.exports._malloc(CHUNK_SIZE);
         const dstPtr = ins.exports._malloc(CHUNK_SIZE);
