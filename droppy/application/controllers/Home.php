@@ -7,7 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
     public function __construct()
     {
-      
         parent::__construct();
 
         // Failure in database connection
@@ -36,7 +35,6 @@ class Home extends CI_Controller {
 
     public function index()
     {
-        
         $this->load->helper('cookie');
         $this->load->helper('seconds');
 
@@ -68,11 +66,9 @@ class Home extends CI_Controller {
         $detect = new Mobile_Detect();
         // Iframe tag
         $iframe = $this->input->get('iframe');
-     //   var_dump('dsfsdfs');exit;
+
         // Loading views
-    
         if(!empty($iframe) && $this->config->item('allow_iframe') == 'true') {
-            
             if(!empty($this->input->get('to')) && empty($data['settings']['default_email_to'])) {
                 $data['settings']['default_email_to'] = $this->input->get('to');
             }
@@ -81,14 +77,10 @@ class Home extends CI_Controller {
             $this->load->view('themes/' . $this->config->item('theme') . '/upload', $data);
             $this->load->view('themes/' . $this->config->item('theme') . '/_elem/footer', $data);
         } else {
-           
             if (file_exists(FCPATH . 'application/views/themes/' . $this->config->item('theme') . '/_elem/header-mobile.php') && ($detect->isMobile() || $detect->isTablet() || $detect->isAndroidOS())) {
                 $data['mobile'] = true;
-              
                 $this->load->view('themes/' . $this->config->item('theme') . '/_elem/header-mobile', $data);
             } else {
-             
-                //var_dump('themes/' . $this->config->item('theme') . '/_elem/header');exit;
                 $this->load->view('themes/' . $this->config->item('theme') . '/_elem/header', $data);
             }
             $this->load->view('themes/' . $this->config->item('theme') . '/_elem/socials', $data);
@@ -101,11 +93,6 @@ class Home extends CI_Controller {
 
             $this->load->view('themes/' . $this->config->item('theme') . '/_elem/modals', $data);
             $this->load->view('themes/' . $this->config->item('theme') . '/_elem/footer', $data);
-
-
-     
-
-
         }
     }
 

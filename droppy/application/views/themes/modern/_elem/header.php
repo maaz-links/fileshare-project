@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +57,7 @@
 
 <!-- Background -->
 <div class="background" id="background"></div>
-<div>Hello World</div>
+
 <!-- Dropzone overlay -->
 <div class="drop-overlay" id="drop-overlay"><p><?php echo lang('drop_files_here'); ?></p></div>
 

@@ -26,7 +26,7 @@ class Upload extends CI_Controller
     function index()
     {
         session_write_close();
-    //    var_dump('dsfsdfs');exit;
+
         $this->logging->log("Upload (part) received, following info was provided: ".print_r($_POST, true));
         $this->logging->log("Following files were provided: ".print_r($_FILES, true));
         $this->logging->log("Following headers were provided: ".print_r(getallheaders(), true));

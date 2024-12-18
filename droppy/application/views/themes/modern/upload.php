@@ -1,5 +1,3 @@
-
-//var_dump('sdfsd');exit;
 <div class="upload-block">
     <div class="upload-block-inner">
         <?php if($settings['ad_1_enabled'] == 'true') : ?>

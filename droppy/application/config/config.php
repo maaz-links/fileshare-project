@@ -1,5 +1,6 @@
 <?php
-defined('BASEPATH') ;
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 /*
 |--------------------------------------------------------------------------
 | Delete old data
